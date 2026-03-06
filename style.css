@@ -109,25 +109,26 @@ body {
 .weather-details {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 48px;
     margin-top: 30px;
 }
 
 .weather-details .humidity, .weather-details .wind {
     display: flex;
     align-items: center;
-    width: 50%;
+    flex: 1;
     height: 100px;
 }
 
 .weather-details .humidity {
-    padding-left: 20px;
-    justify-content: flex-start;
+    padding-left: 0;
+    justify-content: center;
 }
 
 .weather-details .wind {
-    padding-right: 20px;
-    justify-content: flex-end;
+    padding-right: 0;
+    justify-content: center;
 }
 
 .weather-details i {
