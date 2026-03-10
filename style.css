@@ -23,6 +23,7 @@ body {
     height: 105px;
     background: #fff;
     padding: 28px 32px;
+    margin: 0 16px;
     overflow: hidden;
     border-radius: 18px;
     font-family: 'Roboto', sans-serif;
