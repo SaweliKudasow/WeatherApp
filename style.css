@@ -113,13 +113,15 @@ body {
     justify-content: center;
     gap: 48px;
     margin-top: 30px;
+    flex-wrap: wrap;
 }
 
 .weather-details .humidity, .weather-details .wind {
     display: flex;
     align-items: center;
-    flex: 1;
-    height: 100px;
+    flex: 1 1 56px;
+    min-width: 120px;
+    height: 56px;
 }
 
 .weather-details .humidity {
@@ -149,6 +151,14 @@ body {
     color: #06283D;
     font-size: 14px;
     font-weight: 500;
+}
+
+@media (max-width: 440px) {
+    .weather-details {
+        flex-direction: column;
+        gap: 0;
+        align-items: flex-start;
+    }
 }
 
 .not-found {

@@ -9,6 +9,7 @@ fetch('config.json')
     .then(r => r.json())
     .then(d => { APIkey = d.apiKey; });
 
+document.querySelector('.search-box input').addEventListener('keydown', e => e.key === 'Enter' && search.click());
 search.addEventListener('click', () => {
     const city = document.querySelector('.search-box input').value;
 
