@@ -21,7 +21,8 @@ search.addEventListener('click', () => {
         .then(json => {
 
             if (json.cod === '404') {
-                container.style.height = '400px';
+                container.classList.add('expanded');
+                container.style.height = 'auto';
                 weatherBox.style.display = 'none';
                 weatherDetails.style.display = 'none';
                 error404.style.display = 'block';
@@ -66,12 +67,13 @@ search.addEventListener('click', () => {
             temperature.innerHTML = `${parseInt(json.main.temp)}<span>℃</span>`;
             description.innerHTML = `${json.weather[0].description}`;
             humidity.innerHTML = `${json.main.humidity}%`;
-            wind.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
+            wind.textContent = `${parseInt(json.wind.speed)} km/h`;
 
-            weatherBox.style.display = '';
-            weatherDetails.style.display = '';
+            weatherBox.style.display = 'block';
+            weatherDetails.style.display = 'flex';
             weatherBox.classList.add('fadeIn');
             weatherDetails.classList.add('fadeIn');
-            container.style.height = '590px';
+            container.classList.add('expanded');
+            container.style.height = 'auto';
         });
 });
